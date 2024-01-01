@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -83,7 +82,7 @@ class _TodoListScreenState extends State<TodoListScreen1> with WidgetsBindingObs
       appBar: AppBar(
         title: Text('To-Do List'),
         centerTitle: true,
-            backgroundColor: Colors.orange,
+        backgroundColor: Colors.orange,
       ),
       body: Column(
         children: [
@@ -99,8 +98,6 @@ class _TodoListScreenState extends State<TodoListScreen1> with WidgetsBindingObs
                     ),
                   ),
                 ),
-
-
                 IconButton(
                   icon: Icon(Icons.add),
                   onPressed: _addTodo,
@@ -147,6 +144,20 @@ class _TodoListScreenState extends State<TodoListScreen1> with WidgetsBindingObs
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        color: Colors.blue,
+        height: 50.0, // Set your desired height here
+        child: Center(
+          child: Text(
+            'Glory to Ukraine',
+            style: TextStyle(
+              color: Colors.yellow,
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
       ),
     );
   }
